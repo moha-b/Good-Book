@@ -1,4 +1,9 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:good_book/utils/colors.dart';
+import 'feature/splash/views/splash_view.dart';
 
 void main() {
   runApp(const GoodBook());
@@ -9,8 +14,10 @@ class GoodBook extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home:
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: AppColor.primary),
+      home: SplashView()
     );
   }
 }
