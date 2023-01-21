@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-
-import '../../../../utils/colors.dart';
+import '../../../../core/utils/colors.dart';
 
 
 class Rating extends StatelessWidget {
@@ -10,6 +9,7 @@ class Rating extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.end,
       children: const [
         Icon(Iconsax.star1,color: AppColor.orange,size: 25,),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-
-import '../../../../utils/styles.dart';
+import '../../../../core/utils/styles.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({

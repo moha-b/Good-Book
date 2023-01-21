@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:good_book/utils/colors.dart';
-import 'feature/splash/views/splash_view.dart';
+
+import 'core/utils/colors.dart';
+import 'core/utils/router.dart';
 
 void main() {
   runApp(const GoodBook());
@@ -14,10 +14,12 @@ class GoodBook extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return MaterialApp.router(
+      routerDelegate: AppRouter.route.routerDelegate,
+      routeInformationParser: AppRouter.route.routeInformationParser,
+      routeInformationProvider: AppRouter.route.routeInformationProvider,
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: AppColor.primary),
-      home: SplashView()
     );
   }
 }

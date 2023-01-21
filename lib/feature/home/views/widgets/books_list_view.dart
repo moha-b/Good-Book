@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:good_book/feature/home/views/widgets/custom_book_cover.dart';
+import 'package:good_book/core/widgets/custom_book_cover.dart';
 
 class BooksListView extends StatelessWidget {
   const BooksListView({Key? key}) : super(key: key);

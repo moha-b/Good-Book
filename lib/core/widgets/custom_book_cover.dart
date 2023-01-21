@@ -14,13 +14,3 @@ class CustomBookCover extends StatelessWidget {
     );
   }
 }
-/*
-* CachedNetworkImage(
-          fit: BoxFit.fill,
-          imageUrl: imageUrl,
-          errorWidget: (context, url, error) => const Icon(
-            Icons.error,
-          ),
-        ),
-*
-* */

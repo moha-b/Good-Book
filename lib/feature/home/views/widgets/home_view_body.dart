@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:good_book/feature/home/views/widgets/books_list_view.dart';
-import 'package:good_book/utils/styles.dart';
-import 'best_seller_item.dart';
+import '../../../../core/utils/styles.dart';
 import 'best_seller_list_view.dart';
-import 'custom_app_bar.dart';
+import 'home_custom_app_bar.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({Key? key}) : super(key: key);

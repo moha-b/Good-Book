@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:good_book/utils/styles.dart';
-
+import '../../../../core/utils/styles.dart';
 import 'book_rating.dart';
 
 class BestSellerItem extends StatelessWidget {
