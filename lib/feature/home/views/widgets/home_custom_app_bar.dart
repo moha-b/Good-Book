@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:good_book/core/utils/router.dart';
 import 'package:iconsax/iconsax.dart';
 import '../../../../core/utils/styles.dart';
 
@@ -18,7 +20,9 @@ class CustomAppBar extends StatelessWidget {
             "GoodBook",
             style: Styles.regular.copyWith(fontSize: 25),
           ),
-          IconButton(onPressed: () {}, icon: const Icon(Iconsax.search_normal))
+          IconButton(onPressed: () {
+            GoRouter.of(context).push(AppRouter.searchScreen);
+          }, icon: const Icon(Iconsax.search_normal))
         ],
       ),
     );

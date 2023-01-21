@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:good_book/core/utils/router.dart';
 import 'package:good_book/core/widgets/custom_book_cover.dart';
 
 class BooksListView extends StatelessWidget {
@@ -15,7 +17,9 @@ class BooksListView extends StatelessWidget {
         itemBuilder: (context, index) {
           return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8),
-              child: GestureDetector(onTap: () {},child: const CustomBookCover(),));
+              child: GestureDetector(onTap: () {
+                GoRouter.of(context).push(AppRouter.detailScreen);
+              },child: const CustomBookCover(),));
         },
       ),
     );
