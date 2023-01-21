@@ -33,7 +33,7 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Text("GoodBook",style: setStyle(size: 60),textAlign: TextAlign.center,),
+        const Text("GoodBook",style: Styles.big,textAlign: TextAlign.center,),
         SlidingText(slidingAnimation: _slidingAnimation),
       ],
     );

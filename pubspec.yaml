@@ -30,6 +30,7 @@ dependencies:
   flutter:
     sdk: flutter
   get:
+  iconsax:
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
