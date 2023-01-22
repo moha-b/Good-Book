@@ -3,6 +3,6 @@ import 'package:good_book/core/errors/failure.dart';
 import 'package:good_book/feature/data/models/book_model.dart';
 
 abstract class HomeRepo{
-  Future<Either<Failure, List<BookModel>>> fetchBestSellerBooksData();
-  Future<Either<Failure, List<BookModel>>> fetchNewsBooksData();
+  Future<Either<Failure, List<BookModel>>> fetchNewestBooksData();
+  Future<Either<Failure, List<BookModel>>> fetchFeatureBooksData();
 }

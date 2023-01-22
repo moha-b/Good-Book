@@ -32,6 +32,8 @@ dependencies:
   go_router:
   dartz:
   equatable:
+  get_it: 
+  flutter_bloc:
   iconsax:
   dio:
   cupertino_icons: ^1.0.2
