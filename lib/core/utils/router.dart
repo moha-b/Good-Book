@@ -1,8 +1,13 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:good_book/feature/home/views/details_view.dart';
-import 'package:good_book/feature/home/views/home_view.dart';
-import 'package:good_book/feature/search/view/search_view.dart';
-import 'package:good_book/feature/splash/views/splash_view.dart';
+import 'package:good_book/core/utils/services.dart';
+import '../../features/Splash/splash_view.dart';
+import '../../features/data/models/book_model.dart';
+import '../../features/data/repos/home_repo_impl.dart';
+import '../../features/home/book_details_view.dart';
+import '../../features/home/home_view.dart';
+import '../../features/search/search_view.dart';
+import '../../features/viewmodel/similar_books_cubit/similar_books_cubit.dart';
 
 abstract class AppRouter {
   static const String splashScreen = "/";
@@ -20,7 +25,14 @@ abstract class AppRouter {
     ),
     GoRoute(
       path: detailScreen,
-      builder: (context, state) => const DetailsView(),
+      builder: (context, state) => BlocProvider(
+        create: (context) => SimilarBooksCubit(
+          getIt.get<HomeRepoImpl>(),
+        ),
+        child: BookDetailsView(
+          bookModel: state.extra as BookModel,
+        ),
+      ),
     ),
     GoRoute(
       path: searchScreen,

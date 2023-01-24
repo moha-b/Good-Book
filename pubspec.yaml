@@ -32,7 +32,8 @@ dependencies:
   go_router:
   dartz:
   equatable:
-  get_it: 
+  get_it:
+  cached_network_image:
   flutter_bloc:
   iconsax:
   dio:
